@@ -1,0 +1,74 @@
+* {
+    border: 0px dotted rgb(0, 0, 0); 
+}
+
+:root {
+    --primary-color: rgb(240, 128, 128);
+    --primary-color-darker: rgb(241, 124, 124);;
+    --secondary-color: rgb(247, 230, 230);
+    --button-hover-color: rgb(245, 203, 203);
+    --button-click-color: rgb(248, 191, 191);
+    --calculator-shadow: rgba(203, 108, 108, 0.8);
+    --background-gradient: linear-gradient(to bottom, rgb(255, 218, 185), rgb(244, 151, 142));
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--background-gradient);
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    max-width: 550px;
+    overflow: hidden;
+    box-shadow: 0 0 40px var(--calculator-shadow);
+}
+
+#display {
+    width: 90%;
+    padding: 30px;
+    font-size: 5rem;
+    text-align: right;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--primary-color-darker);
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: var(--button-click-color);
+    transform: scale(1.25);
+    transition: transform 0.15s ease;
+}
